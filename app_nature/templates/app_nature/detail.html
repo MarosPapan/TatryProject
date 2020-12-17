@@ -1,0 +1,68 @@
+{% extends 'app_nature/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container one_peak_page">
+    <div class="row">
+        <div class="col-lg-12 text-left"><h1>{{peak.name}}</h1></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4 text-center">
+            <h4>Nadmorská výška: {{peak.height}}m.n m</h4>
+        </div>
+        <div class="col-lg-4 text-center"><h4>{{peak.location}}</h4></div>
+        <div class="col-lg-4 text-center"><h4>{{peak.gps}}</h4></div>
+    </div>
+    <hr>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <p>{{peak.text}}</p>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Počasie</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form method="get">
+                    {% csrf_token %}
+                    {{form}}
+                    <button type="submit" name="hladat">Hľadať</button>
+                    {% if message %}
+                        <div class="text-center {{message_class}}">{{message}}</div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="weather-left img-fluid" src="{% static 'app_nature/images/weather/clouds.jpg' %}" width="380">
+        </div>
+        <div class="col-lg-4 weather-middle">
+            <h1>{{city_weather.city}} <span><img src="http://openweathermap.org/img/wn/{{city_weather.icon}}@2x.png"></span></h1>
+
+            <h3>Teplota: {{city_weather.temperature}}°C</h3>
+
+            <h3>{{city_weather.description}} <span><img src="http://openweathermap.org/img/wn/{{city_weather.icon}}@2x.png" width="70"></span></h3>
+
+            <h3>Minimálna teplota: {{city_weather.min_temp}}°C</h3>
+            <h3>Maximálna teplota: {{city_weather.max_temp}}°C</h3>
+        </div>
+        <div class="col-lg-4">
+            <img class="weather-right img-fluid" src="{% static 'app_nature/images/weather/clouds.jpg' %}" width="380">
+        </div>
+    </div>
+</div>
+{% endblock %}

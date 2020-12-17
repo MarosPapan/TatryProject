@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster+Two&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2e370f831b.js" crossorigin="anonymous"></script>
+    <title>Tatras</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app_nature/style.css' %}">
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav-item button-left-nav">
+            <a class="nav-link text-center" href="/">Homepage</a>
+        </li>
+        <li class="nav-item button-left-nav">
+            <a class="nav-link text-center" href="#">Your Blogs</a>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img src="{{user.profile.image.url}}" class="rounded-circle" alt="Profile image" width="170" height="170">
+                <h1 class="username">{{user.username}}</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img src="{% static 'app_nature/images/logas/hiking_icon.png' %}" width="40" class="profile-icon-devider">
+                <div class="col-lg-12 line"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <a href="/add_post" class="btn btn-light profile-button">ADD POSTS</a>
+            </div>
+            <div class="col-lg-4 btn-lg text-center">
+                <h2>Points: 578</h2>
+            </div>
+            <div class="col-lg-4 text-center">
+                <button type="button" class="btn btn-light profile-button">ADD HIKE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row text-center mt-profile">
+            <div class="col-lg-12">
+                <h3>Posts</h3>
+            </div>
+        </div>
+
+        <div class="row text-center mt-profile">
+            {% if posts %}
+                {% for i in posts %}
+                    <div class="col-lg-4 text-center">
+                        <img src="{{i.image.url}}" alt="post" class="post-profile">
+                        <p>{{i.description}}</p>
+                        <p>{{i.author}}</p>
+                        <p>Created {{i.created_date}}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h1>There is no post</h1>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="tree-icon-picture">
+        <img src="{% static 'app_nature/images/logas/tree_green_icon1.png' %}">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

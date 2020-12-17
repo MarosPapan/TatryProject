@@ -1,0 +1,190 @@
+{% extends 'app_nature/base.html' %}
+{% load static %}
+<!-- tu si v body>div>content-->
+{% block content %}
+<div id="carouselExampleControls header" class="carousel slide slider" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'app_nature/images/back_image-3.jpg' %}" alt="First slide">
+        <div class="col-md-auto carousel-caption text-center">
+          <h2>Objav krásu Slovenska</h2>
+          <h1>TATRY</h1>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'app_nature/images/hiking-girl.jpg' %}" alt="Second slide">
+         <div class="col-md-auto carousel-caption text-left">
+          <h2 class="text-center">Objav krásu Slovenska</h2>
+          <h1 class="text-center">TATRY</h1>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'app_nature/images/lake.jpg' %}" alt="Third slide">
+        <div class="col-md-auto carousel-caption text-left">
+          <h2 class="text-center">Objav krásu Slovenska</h2>
+          <h1 class="text-center">TATRY</h1>
+        </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <!--<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+    <span class="sr-only"></span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+    <span class="sr-only"></span>
+  </a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+          <a href="#header"><img class="third_logo" src="{% static 'app_nature/images/logas/logo_3.png' %}" alt="icon representing peaks" width="80"></a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center main_text" id="main_text">
+            <h2>O čom je stránka</h2>
+            <p>{{maintext.text_on_website}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xl-4 col-lg-6 col-md-6 d-flex justify-content-center">
+      <div class="card text-center" style="width: 23rem;">
+        <img class="card-img-top" src="{% static 'app_nature/images/question_mark.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-xl-4 col-lg-6 col-md-6 d-flex justify-content-center">
+      <div class="card text-center" style="width: 23rem;">
+        <img class="card-img-top" src="{% static 'app_nature/images/question_mark.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-xl-4 col-lg-12 col-md-12 d-flex justify-content-center">
+      <div class="card text-center" style="width: 23rem;">
+        <img class="card-img-top" src="{% static 'app_nature/images/question_mark.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2>POHORIE TATRY</h2>
+            <p>{{description_of_tatras.text_on_website}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+          <a href="#header"><img class="third_logo" src="{% static 'app_nature/images/logas/logo_3.png' %}" alt="icon representing peaks" width="80"></a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6">
+      <div class="photo">
+             <a href=""><img src="{% static 'app_nature/images/question_mark.jpg' %}" class="img-fluid"></a>
+            <div class="image_content">
+                <h2>title</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="photo">
+             <a href=""><img src="{% static 'app_nature/images/question_mark.jpg' %}" class="img-fluid"></a>
+            <div class="image_content">
+                <h2>title</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="photo">
+             <a href=""><img src="{% static 'app_nature/images/question_mark.jpg' %}" class="img-fluid"></a>
+            <div class="image_content">
+                <h2>title</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-lg-4 col-md-6 d-none d-sm-block">
+      <div class="photo">
+             <a href=""><img src="{% static 'app_nature/images/question_mark.jpg' %}" class="img-fluid"></a>
+            <div class="image_content">
+                <h2>title</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 d-none d-sm-block">
+      <div class="photo">
+             <a href=""><img src="{% static 'app_nature/images/question_mark.jpg' %}" class="img-fluid"></a>
+            <div class="image_content">
+                <h2>title</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 d-none d-sm-block">
+      <div class="photo">
+             <a href=""><img src="{% static 'app_nature/images/question_mark.jpg' %}" class="img-fluid"></a>
+            <div class="image_content">
+                <h2>title</h2>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+          <a href="#header"><img class="third_logo" src="{% static 'app_nature/images/logas/logo_3.png' %}" alt="icon representing peaks" width="80"></a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-center">
+        <h1><i>Nízke Tatry</i></h1>
+        <iframe class="img-fluid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1341627.493252753!2d18.417465317088894!3d48.94651261476754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4715743ca1c2f567%3A0xdcdc20c5cc9f0f6f!2sN%C3%ADzke%20Tatry!5e0!3m2!1ssk!2ssk!4v1579031915659!5m2!1ssk!2ssk" width="500" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+
+
+      <div class="col-lg-6 text-center">
+        <h1><i>Vysoké a Zapadné Tatry</i></h1>
+        <iframe class="img-fluid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660254.9159894553!2d18.437546037808207!3d49.372866878485176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47158967a6808c4b%3A0x2740be5aae062b58!2sTatry!5e0!3m2!1ssk!2ssk!4v1579031996553!5m2!1ssk!2ssk" width="500" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </div>
+</div>
+{% endblock %}

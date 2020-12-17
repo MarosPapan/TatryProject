@@ -1,0 +1,122 @@
+.peaks_page{
+    background-image: url("images/view_tatras.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1920px 1200px;
+}
+.title{
+    position: relative;
+    margin: 0 0 20px 0;
+    text-align: center;
+    top: 85px;
+    color: black;
+}
+
+.container_peaks{
+    max-width: 1214px;
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+}
+
+.image{
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 10px;
+}
+
+.container_peaks .card_peaks{
+    display: inline-block;
+    /*margin: 80px 10px 40px 10px;*/
+    height: 420px;
+    z-index: 1;
+    color: black;
+}
+
+.name_of_peaks{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+.title{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+.face{
+    transition: 0.5s;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.face1{
+    z-index: 1;
+    transform: translateY(10px);
+    position: relative;
+    color: black;
+}
+
+.card_peaks:hover .face1{
+    transform: translateY(-30px);
+    z-index: 4;
+}
+
+.face2{
+    transform: translateY(-230.10px);
+    z-index: 0;
+    width: 300px;
+    height: auto;
+    margin-bottom: 2px;
+    position: absolute;
+    color: white;
+    background-color: #0006;
+    border: 1px solid #0000.2;
+    border-radius: 15px;
+}
+
+.card_peaks:hover .face2{
+    transform: translateY(-40px);
+    z-index: 3;
+}
+
+.container_peaks .card_peaks .face2 p{
+    text-align: left;
+    padding: 0;
+    margin: 0 0 5px 0;
+}
+
+.card_peaks:hover{
+    margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 1213px){
+    .container_peaks{
+        max-width: 909px;
+    }
+
+    .peaks_page{
+        background-size: auto auto;
+    }
+}
+
+@media only screen and (max-width: 908px){
+    .container_peaks{
+        max-width: 605px;
+    }
+    .peaks_page{
+        background-size: auto auto;
+    }
+}
+
+@media only screen and (max-width: 604px){
+    .container_peaks{
+        max-width: 300px;
+    }
+    .peaks_page{
+        background-size: auto auto;
+    }
+}
+/*detail page*/
+
+.one_peak_page{
+    margin-top: 90px;
+}

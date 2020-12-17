@@ -1,0 +1,28 @@
+{% extends 'app_nature/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="peaks_page">
+    <h1 class="title">{{mountains.mountain_name}}</h1>
+    <div class="container_peaks">
+        {% for i in peaks_all %}
+            <div class="card_peaks">
+                <div class="face face1">
+                    <div class="content">
+                        <a href="/peak_inf/{{i.id}}"><img class="image" src="{% static 'app_nature/images/question_mark.jpg' %}"></a>
+                        <h2 class="name_of_peaks">{{i.name}}</h2>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content text_none">
+                        <p>Nadmorská výška: {{i.height}}m n. m.</p>
+                        <p>{{i.location}}</p>
+                        <p>{{i.gps}}</p>
+                        <p>{{i.quick_description}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+   </div>
+</div>
+{% endblock %}
